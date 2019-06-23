@@ -27,7 +27,7 @@ func isPrime(devider float64) string {
 
 func main()  {
 	reader := bufio.NewReader(os.Stdin)
-	fmt.Print("Enter text: ")
+	fmt.Print("Enter number: ")
 	text, _ := reader.ReadString('\n')
 
 	//Maybe there is exist better way to delete those symbols from the end of command line string?
