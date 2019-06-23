@@ -28,14 +28,14 @@ func isPrime(devider float64) string {
 func main()  {
 	reader := bufio.NewReader(os.Stdin)
 	fmt.Print("Enter number: ")
-	text, _ := reader.ReadString('\n')
+	input, _ := reader.ReadString('\n')
 
 	//Maybe there is exist better way to delete those symbols from the end of command line string?
-	text = strings.TrimSuffix(text, "\n")
-	text = strings.TrimSuffix(text, "\r")
+	input = strings.TrimSuffix(input, "\n")
+	input = strings.TrimSuffix(input, "\r")
 
 	//Parse input string to float64
-	input, err := strconv.ParseFloat(text, 64)
+	inputFloat, err := strconv.ParseFloat(input, 64)
 
 	if err != nil{
 		fmt.Println(err)
@@ -43,7 +43,7 @@ func main()  {
 		return
 	}
 
-	number = input
+	number = inputFloat
 
 	fmt.Println(isPrime(2))
 }
